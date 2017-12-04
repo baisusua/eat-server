@@ -140,7 +140,7 @@ module.exports = function (app) {
                 }
             }
             if (id && user_id && food_id && price && date) {
-                ctrl.addCtrl(config).subscribe((data) => {
+                ctrl.updateCtrl(config).subscribe((data) => {
                     /*  */
                     if (!data.SequelizeDatabaseError) {
                         res.send({
