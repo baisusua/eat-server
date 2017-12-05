@@ -34,7 +34,7 @@ module.exports = function (app) {
     })
     app.post('/v1/food/create/all', function (req, res) {
         if (req.body.list) {
-            const list = JSON.parse(req.body.list);
+            // const list = JSON.parse(req.body.list);
             if (req.body.list.length > 0) {
                 ctrl.createCtrl(req.body.list).subscribe((data) => {
                     if (!data.SequelizeDatabaseError) {
